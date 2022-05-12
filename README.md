@@ -108,6 +108,12 @@ $search = Unsplash::search()
     ->color('black_and_white')
     ->orientation('squarish')
     ->toJson();
+    
+//Beta support for languages
+$searchLang = Unsplash::search()
+    ->term('batiments')
+    ->lang('fr')
+    ->toJson();
 
 $searchCollections = Unsplash::searchCollections()
     ->query('events')

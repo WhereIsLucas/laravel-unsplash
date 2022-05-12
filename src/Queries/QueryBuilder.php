@@ -99,6 +99,17 @@ trait QueryBuilder
     }
 
     /**
+     * Set language code of the search term (still in beta).
+     * @param string $param
+     */
+    public function lang($param = null): self
+    {
+        $this->query['lang'] = $param ?? null;
+
+        return $this;
+    }
+
+    /**
      * The number of photos to return.
      * @param int|string $param min 1, max 30
      */
